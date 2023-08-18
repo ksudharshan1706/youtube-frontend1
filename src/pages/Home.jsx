@@ -45,29 +45,9 @@ const Home = ({type}) => {
   return (
     
     <Container>
-      {/* {videos.map(video=> (
+     {videos.map(video=> (
         <Card key={video._id} video={video}/>))
-<<<<<<< HEAD
-=======
-      } */}
-      {currentUser?
-      (videos.map(video=> (
-        <Card key={video._id} video={video}/>
-      )))
-      :(
-        <Login>
-        Sign in to like videos, comment, and subscribe.
-        <Link to="signin" style={{ textDecoration: "none" }}>
-          <Button>
-            <AccountCircleOutlinedIcon />
-            SIGN IN
-          </Button>
-        </Link>
-      </Login>
-      //<div style={{color:"white",display:"flex",alignContent:"center",justifyContent:"center"}}>Login</div>
-      )
->>>>>>> e7fc0cccc655591f2ad21215f08fcddcf8056a9c
-      }
+     }
     </Container>
   );
 };
