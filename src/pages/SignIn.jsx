@@ -142,7 +142,7 @@ const SignIn = () => {
     <Container>
       <Wrapper>
         <Title>Sign in</Title>
-        <SubTitle>to continue to LamaTube</SubTitle>
+        <SubTitle>to continue to YouTube</SubTitle>
         <Input placeholder="email" onChange={e=>setEmail(e.target.value)}/>
         <Input type="password" placeholder="password" onChange={e=>setPassword(e.target.value)}/>
         <Button onClick={handleLogin}>Sign in</Button>
