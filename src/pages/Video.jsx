@@ -127,6 +127,7 @@ const Video = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const path = useLocation().pathname.split("/")[2];
+  console.log(path)
   const [channel,setChannel] = useState({})
 
   useEffect(() => {
@@ -136,6 +137,7 @@ const Video = () => {
         const channelRes = await axios.get(
           `/users/find/${videoRes.data.userId}`
         );
+        console.log(path,videoRes,channelRes)
         setChannel(channelRes.data);
         dispatch(fetchSuccess(videoRes.data));
       } catch (err) {}
