@@ -132,6 +132,7 @@ const Video = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      console.log("inside 1st useeffect")
       try {
         const videoRes = await axios.get(`/videos/find/${path}`);
         const channelRes = await axios.get(
@@ -140,7 +141,9 @@ const Video = () => {
         console.log(path,videoRes,channelRes)
         setChannel(channelRes.data);
         dispatch(fetchSuccess(videoRes.data));
-      } catch (err) {}
+      } catch (err) {
+        console.log(err)
+      }
     };
     fetchData();
   }, [path, dispatch]);
